@@ -33,13 +33,6 @@
     </item>
     <item>
       <title></title>
-      <link>https://hammerdev99.github.io/layouts/partials/footer/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>arbe.94@hotmail.com (Daniel Arbelaez Alvarez)</author>
-      <guid>https://hammerdev99.github.io/layouts/partials/footer/</guid>
-      <description>{{ with .Site.Params.social.email }} {{ end }} {{ with .Site.Params.social.twitter }} {{ end }} {{ with .Site.Params.social.zhihu }} 知 {{ end }} {{ with .Site.Params.social.weibo }} {{ end }} {{ with .Site.Params.social.facebook }} {{ end }} {{ with .Site.Params.social.wechat }} {{ end }} {{ with .Site.Params.social.github }} {{ end }} {{ with .Site.Params.social.gitlab }} {{ end }} {{ with .Site.Params.social.git }} {{ end }} {{ with .Site.Params.social.linkedin }} {{ end</description>
-    </item>
-    <item>
-      <title></title>
       <link>https://hammerdev99.github.io/notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>arbe.94@hotmail.com (Daniel Arbelaez Alvarez)</author>
       <guid>https://hammerdev99.github.io/notes/</guid>
