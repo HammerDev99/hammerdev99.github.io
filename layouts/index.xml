@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Layouts on Hammered Solutions</title>
+    <link>https://hammerdev99.github.io/layouts/</link>
+    <description>Recent content in Layouts on Hammered Solutions</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>arbe.94@hotmail.com (Daniel Arbelaez Alvarez)</managingEditor>
+    <webMaster>arbe.94@hotmail.com (Daniel Arbelaez Alvarez)</webMaster>
+    <atom:link href="https://hammerdev99.github.io/layouts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://hammerdev99.github.io/layouts/partials/footer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>arbe.94@hotmail.com (Daniel Arbelaez Alvarez)</author>
+      <guid>https://hammerdev99.github.io/layouts/partials/footer/</guid>
+      <description>{{ with .Site.Params.social.email }} {{ end }} {{ with .Site.Params.social.twitter }} {{ end }} {{ with .Site.Params.social.zhihu }} 知 {{ end }} {{ with .Site.Params.social.weibo }} {{ end }} {{ with .Site.Params.social.facebook }} {{ end }} {{ with .Site.Params.social.wechat }} {{ end }} {{ with .Site.Params.social.github }} {{ end }} {{ with .Site.Params.social.gitlab }} {{ end }} {{ with .Site.Params.social.git }} {{ end }} {{ with .Site.Params.social.linkedin }} {{ end</description>
+    </item>
+  </channel>
+</rss>
