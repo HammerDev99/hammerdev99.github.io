@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="Hammered Solutions">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://hammerdev99.github.io//img/home-bg-jeep.jpg">
+    <meta property="twitter:image" content="https://hammerdev99.github.io//img/home-bg-jeep.jpg" />
+    
+
+    
+    <meta name="title" content="" />
+    <meta property="og:title" content="" />
+    <meta property="twitter:title" content="" />
+    
+
+    
+    <meta name="description" content="Frase 1 | Frase 2">
+    <meta property="og:description" content="Frase 1 | Frase 2" />
+    <meta property="twitter:description" content="Frase 1 | Frase 2" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="Blog, Web, Blog, Blogging, Personal Website, Internet">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>Hammered Solutions | Daniel Arbelaez</title>
+
+    <link rel="canonical" href="/post/01introduction-to-rpa-and-automation/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Hammered Solutions</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">All Posts</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/tech/">tech</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="/archive//">ARCHIVE</a></li>
+                    
+                        <li><a href="/notes//">NOTES</a></li>
+                    
+                        <li><a href="/about//">ABOUT</a></li>
+                    
+		            <li>
+                        <a href="/search"><i class="fa fa-search"></i></a>
+		           </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/home-bg-jeep.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
+                    <h1></h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                    Hammered Solutions
+                             
+                            on 
+                            Monday, January 1, 0001
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <h1 id="introduction-to-rpa-and-automation">Introduction to RPA and automation</h1>
+<p>Autor: Daniel Arbeláez</p>
+<p>Fecha: 23-06-2022</p>
+<p>Link al plan de aprendizaje: <a href="https://academy.uipath.com/learning-plans/rpa-starter">RPA Starter</a></p>
+<h2 id="tabla-de-contenido">Tabla de contenido</h2>
+<ul>
+<li><a href="#introduction-to-rpa-and-automation">Introduction to RPA and automation</a>
+<ul>
+<li><a href="#tabla-de-contenido">Tabla de contenido</a></li>
+<li><a href="#what-youll-learn-in-this-course">What you&rsquo;ll learn in this course</a></li>
+<li><a href="#what-is-rpa-what-is-automation">What Is RPA? What Is Automation?</a></li>
+<li><a href="#automation-is-driving-the-digital-transformation">Automation Is Driving the Digital Transformation</a></li>
+<li><a href="#automation-in-business">Automation in Business</a></li>
+<li><a href="#the-automation-journey">The Automation Journey</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="what-youll-learn-in-this-course">What you&rsquo;ll learn in this course</h2>
+<p>At the end of this course, you should be able to:</p>
+<ol>
+<li>Define RPA and automation and explain their impact on digital transformation.</li>
+<li>Map and assess some of the business processes that are fit for automation.</li>
+<li>Describe the main stages of the typical enterprise automation journey and the role played by the Center of Excellence.</li>
+<li>Explain the components of the UiPath Platform and the benefits it brings to the fully automated enterprise</li>
+</ol>
+<h2 id="what-is-rpa-what-is-automation">What Is RPA? What Is Automation?</h2>
+<p>RPA: Permite que robots de software realicen tareas repetitivas basadas en reglas. Pueden imitar las acciones humanas haciendo que los procesos funcionen.</p>
+<p>Aspectos a tener en cuenta:</p>
+<ul>
+<li>RPA Software puede cometer errores tanto como haya configurado la buena ejecución del proceso automatizado</li>
+<li>Con lenguajes de programación y API&rsquo;s se puede automatizar pero implica tener problemas de escalabilidad</li>
+<li>El RPA puede existir en cualquier industria que contenga actividades repetitivas</li>
+<li>El RPA puede disminuir los costos operacionales y un aumento en la eficiencia</li>
+<li>RPA se centra en tareas rutinarias, repetitivas y tediosas</li>
+</ul>
+<p>Habilidades de un robot de RPA:</p>
+<ul>
+<li>Extraer datos estructurados de documentos</li>
+<li>Iniciar sesión y ejecutar aplicaciones</li>
+<li>Abrir correos electrónicos y archivos adjuntos</li>
+<li>Completar formularios</li>
+<li>Escrubir en bases de datos</li>
+<li>Hacer calculos</li>
+<li>Conectarse a otros sistemas</li>
+<li>Mucho más</li>
+</ul>
+<h2 id="automation-is-driving-the-digital-transformation">Automation Is Driving the Digital Transformation</h2>
+<p>La automatización no pretende reemplazar a las personas, en cambio busca liberarlas. Algunas de las razones por las que la RPA puede convertirse en una herramienta muy versatil sería:</p>
+<ul>
+<li>Habilidades IA: Para el reconocimiento de texto en documentos (reconocmiento óptico inteligente). Analizar y procesar texto</li>
+<li>Machine Learning: Aprender del trabajo automatizado</li>
+<li>Integración nativa: Facilita el uso de aplicaciones existentes en la empresa</li>
+<li>Flujos de trabajo de ejecución prolongada (Long-running Workflows): Poder realizar procedimientos en paralelo (para este proceso es necesario orquestar de acuerdo a la disponibilidad de los robots para que los mismos puedan utilizar su máximo potencial)</li>
+<li>Mineria de procesos y de tareas: los datos sin procesar los convierte en graficos e información de valor para poder realizar futuras automatizaciones</li>
+<li>Analiticas avanzadas: Ayuda a procesar datos y generar información de valor con la tecnología RPA</li>
+</ul>
+<h2 id="automation-in-business">Automation in Business</h2>
+<p>Algunos de las actividades en las que se puede aplicar la RPA son:</p>
+<ul>
+<li>Procesamiento de nóminas</li>
+<li>Actualización de información de cliente</li>
+<li>Conciliuación de estados financieros</li>
+<li>Informes de cumplimiento (auditorias)</li>
+<li>Categorizar quejas de los clientes</li>
+</ul>
+<p>
+  <img src="assets/RPA_Industries.JPG" alt="alt">
+
+</p>
+<blockquote>
+<p>La automatización no sólo repercute en los ingresos y el tiempo: la automatización de las tareas repetitivas también conduce a una mejora de la experiencia de los clientes y los empleados, facilita las operaciones de IA, garantiza el cumplimiento de la normativa y agiliza el proceso de toma de decisiones.</p>
+</blockquote>
+<h2 id="the-automation-journey">The Automation Journey</h2>
+<p>
+  <img src="assets/RPA__AppsJourney.JPG" alt="alt">
+
+</p>
+<ul>
+<li><strong>Discover</strong>: Esta fase se centra en la definición de la gobernanza de los procesos y en el uso de los datos para para elegir los procesos adecuados para la automatización; las oportunidades de automatización las identifica el empleado o las tecnologías impulsadas por la IA.</li>
+<li><strong>Build</strong>: En la fase de construcción hay soluciones que se dirigen a:
+<ul>
+<li><strong>Professional automation developers</strong>: Que ofrecen potentes herramientas de desarrollo y depuración, integraciones avanzadas, así como funciones.</li>
+<li><strong>Business Users</strong>: Que automatizan rápidamente sus aplicaciones empresariales sin necesidad de recursos de desarrollo o conocimientos de codificación.</li>
+</ul>
+</li>
+<li><strong>Management</strong>: Las capacidades de gestión ayudan a probar, desplegar, gestionar y optimizar el rendimiento de la flota de robots y de las capacidades de IA.</li>
+<li><strong>Running</strong>: El funcionamiento de los robots tiene que ofrecer flexibilidad, ajustándose a los tipos de procesos automatizados, al tipo de colaboración entre humanos y robots y a la configuración existente.</li>
+<li><strong>Engagement</strong>: El compromiso entre los usuarios humanos y los robots se produce de forma sencilla, siempre que sea necesario.</li>
+</ul>
+<p>
+  <img src="assets/RPA_Lifecycle.JPG" alt="alt">
+
+</p>
+<p>
+  <img src="assets/Lifecycle_Ceo_1.JPG" alt="alt">
+
+</p>
+<p>
+  <img src="assets/Lifecycle_Ceo_2.JPG" alt="alt">
+
+</p>
+<p>
+  <img src="assets/Lifecycle_RPA_Developer.JPG" alt="alt">
+
+</p>
+<p>
+  <img src="assets/Lifecycle_IT_Operations.JPG" alt="alt">
+
+</p>
+<p>
+  <img src="assets/Lifecycle_Automation_Users.JPG" alt="alt">
+
+</p>
+<p>
+  <img src="assets/Lifecycle_Process_Analysts.JPG" alt="alt">
+
+</p>
+<p>Meet StudioX: Es una herramienta que se utiliza para crea el flujo de trabajo de una automatización de una forma no-code</p>
+<p>
+  <img src="assets/RPA_PlanningWheel.JPG" alt="alt">
+
+</p>
+<p>Para mayor detalle de cada uno de las herramientas de UIPath, ingresar al documento <a href="assets/The_UiPath_Platform.pdf">The UiPath Platform</a></p>
+<p><a href="assets/LearningPath_Certificate_06302022122608768.pdf">Diploma de finalización de estudios</a></p>
+
+
+                
+                
+<div class="entry-shang text-center">
+    
+	    <p>"El agradecimiento sincero deja una fragancia persistente en tus manos"</p>
+	
+	<button class="zs show-zs btn btn-bred">Agradezco el apoyo</button>
+</div>
+<div class="zs-modal-bg"></div>
+<div class="zs-modal-box">
+	<div class="zs-modal-head">
+		<button type="button" class="close">×</button>
+		<span class="author"><a href="https://hammerdev99.github.io/"><img src="/img/favicon.png" />Hammered Solutions</a></span>
+        
+	        <p class="tip"><i></i><span>"El agradecimiento sincero deja una fragancia persistente en tus manos"</span></p>
+		
+ 
+	</div>
+	<div class="zs-modal-body">
+		<div class="zs-modal-btns">
+			<button class="btn btn-blink" data-num="2">2 USD</button>
+			<button class="btn btn-blink" data-num="5">5 USD</button>
+			<button class="btn btn-blink" data-num="10">10 USD</button>
+			<button class="btn btn-blink" data-num="50">50 USD</button>
+			<button class="btn btn-blink" data-num="100">100 USD</button>
+			<button class="btn btn-blink" data-num="1">Otro</button>
+		</div>
+		<div class="zs-modal-pay">
+			<button class="btn btn-bred" id="pay-text">2元</button>
+			<p>Utilice<span id="pay-type">WeChat</span>Utilice <span id="pay-type">WeChat</span> para escanear el código QR y completar el pago</p>
+			<img src="/img/reward/wechat-2.png"  id="pay-image"/>
+		</div>
+	</div>
+	<div class="zs-modal-footer">
+		<label><input type="radio" name="zs-type" value="wechat" class="zs-type" checked="checked"><span ><span class="zs-wechat"><img src="/img/reward/wechat-btn.png"/></span></label>
+		<label><input type="radio" name="zs-type" value="alipay" class="zs-type" class="zs-alipay"><img src="/img/reward/alipay-btn.png"/></span></label>
+	</div>
+</div>
+<script type="text/javascript" src="/js/reward.js"></script>
+
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2023/05/10/hello-world/" data-toggle="tooltip" data-placement="top" title="Hammered Solutions">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+
+                
+
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+                <section>
+                    <hr>
+                    <h5>FRIENDS</h5>
+                    <ul class="list-inline">
+                        
+                        <li><a target="_blank" href="https://zhaozhihan.com">Amigo Blog</a></li>
+                        
+                    </ul>
+                </section>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    <li>
+                        <a href="mailto:arbe.94@hotmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/HammerDev99">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/daniel-arbelaez-/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+                   <li>
+                       <a href='' rel="alternate" type="application/rss+xml" title="Hammered Solutions" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+            
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; Hammered Solutions 2024
+                    
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>
