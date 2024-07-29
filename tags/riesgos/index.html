@@ -34,9 +34,9 @@
     <meta name="keyword"  content="Blog, Web, Blog, Blogging, Personal Website, Internet">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>Searches | Hammered Solutions | Daniel Arbelaez</title>
+    <title>Riesgos | Hammered Solutions | Daniel Arbelaez</title>
 
-    <link rel="canonical" href="/search/">
+    <link rel="canonical" href="/tags/riesgos/">
 
     
     
@@ -193,7 +193,8 @@
 
 
 
-<div class="container">
+  
+<div data-pagefind-ignore="all" class="container">
     <div class="row">
         
         
@@ -204,117 +205,43 @@
             col-xs-12
             post-container
         ">
-        
             
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch-theme-algolia.min.css">
+<div data-pagefind-ignore="all">
 
-<div id="search-searchbar"></div>
- <div class="post-list" id="search-hits">
- </div>
-
-<script>
-const search = instantsearch({
-  appId: '',
-  indexName: '',
-  apiKey: ''
-});
-
-const hitTemplate = function(hit) {
-
-
-  let date = '';
-  if (hit.date) {
-    date = moment.unix(hit.date).format('MMM D, YYYY');
-  }
-  let url = `${hit.url}#${hit.anchor}`;
-  const title = hit._highlightResult.title.value;
-
-  let breadcrumbs = '';
-  if (hit._highlightResult.headings) {
-    breadcrumbs = hit._highlightResult.headings.map(match => {
-      return `<span class="post-breadcrumb">${match.value}</span>`
-    }).join(' > ')
-  }
-
-  let content = "" ; 
-  if (hit._highlightResult.content){
-      content = hit._highlightResult.content.value;
-  }
-  else{
-      content = hit.summary;
-  }
-
-
-  return `
-    <div class="post-item">
-      <span class="post-meta">${date}</span>
-      <h2><a class="post-link" href="${url}">${title}</a></h2>
-      <a href="${url}" class="post-breadcrumbs">${breadcrumbs}</a>
-      <div class="post-snippet">${content}</div>
-    </div>
-  `;
-}
-
-
-search.addWidget(
-  instantsearch.widgets.searchBox({
-    container: '#search-searchbar',
-    placeholder: 'Search into posts...',
-    poweredBy: true 
-  })
-);
-
-search.addWidget(
-  instantsearch.widgets.hits({
-    container: '#search-hits',
-    templates: {
-      item: hitTemplate
-    }
-  })
-);
-
-search.start();
-</script>
-
-<style>
-.ais-search-box {
-  max-width: 100%;
-  margin-bottom: 15px;
-}
-.post-item {
-  margin-bottom: 30px;
-}
-.post-link .ais-Highlight {
-  color: #111;
-  font-style: normal;
-  text-decoration: underline;
-}
-.post-breadcrumbs {
-  color: #424242;
-  display: block;
-}
-.post-breadcrumb {
-  font-size: 18px;
-  color: #424242;
-}
-.post-breadcrumb .ais-Highlight {
-  font-weight: bold;
-  font-style: normal;
-}
-.post-snippet .ais-Highlight {
-  color: #2a7ae2;
-  font-style: normal;
-  font-weight: bold;
-}
-.post-snippet img {
-  display: none;
-}
-</style>
-
+<div class="post-preview">
+    <a href="https://hammerdev99.github.io/2023/08/15/delitos-informaticos-riesgos-ciberneticos/">
+        <h2 class="post-title">
+            Explorando Delitos Informáticos y Riesgos Cibernéticos: Claves para la Seguridad Digital
+        </h2>
+	
+        <h3 class="post-subtitle">
+            Descubre cómo gestionar amenazas digitales en un entorno de constante evolución tecnológica
+        </h3>
+	
+        <div class="post-content-preview">
+	
+            Explorando Delitos Informáticos y Riesgos Cibernéticos En el mundo digital actual, la ciberseguridad se ha vuelto esencial. Este artículo ofrece una guía conceptual sobre delitos informáticos y riesgos cibernéticos, ayudando a comprender y enfrentar las amenazas digitales. A medida que la tecnología avanza a pasos agigantados, la ciberseguridad se ha convertido en una preocupación crucial tanto para organizaciones como para individuos. Enfrentar las amenazas digitales requiere una comprensión profunda y estrategias efectivas.
+       
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by      &#34;Daniel Arbelaez&#34; on Tuesday, August 15, 2023 <br>
+        1211 words. 6 minuts read.
         
+        
+    
+    </p>
+
+</div>
+<hr>
+
+</div>
+
+            
+
+
+
        	</div>
         
 
@@ -437,6 +364,8 @@ search.start();
 
 
 
+
+
 <footer>
     <div class="container">
         <div class="row">
@@ -492,7 +421,7 @@ search.start();
             
            
                    <li>
-                       <a href='/search/index.xml' rel="alternate" type="application/rss+xml" title="Hammered Solutions" >
+                       <a href='/tags/riesgos/index.xml' rel="alternate" type="application/rss+xml" title="Hammered Solutions" >
                            <span class="fa-stack fa-lg">
                                <i class="fas fa-circle fa-stack-2x"></i>
                                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
