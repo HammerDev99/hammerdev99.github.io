@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="Pila en un navegador web" />
-    <meta property="og:title" content="Pila en un navegador web" />
-    <meta property="twitter:title" content="Pila en un navegador web" />
+    <meta name="title" content="Cola en un gestor de tareas" />
+    <meta property="og:title" content="Cola en un gestor de tareas" />
+    <meta property="twitter:title" content="Cola en un gestor de tareas" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="Blog, Web, Blog, Blogging, Personal Website, Internet">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>Pila en un navegador web | Hammered Solutions | Daniel Arbelaez</title>
+    <title>Cola en un gestor de tareas | Hammered Solutions | Daniel Arbelaez</title>
 
-    <link rel="canonical" href="/2024/04/10/stack_example/">
+    <link rel="canonical" href="/2024/04/10/queue_example/">
 
     
     
@@ -192,12 +192,12 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/pilas" title="pilas">
-                            pilas
+                        <a class="tag" href="/tags/colas" title="colas">
+                            colas
                         </a>
                         
                     </div>
-                    <h1>Pila en un navegador web</h1>
+                    <h1>Cola en un gestor de tareas</h1>
                     <h2 class="subheading"></h2>
                     <span class="meta">
                         
@@ -232,48 +232,46 @@
                 post-container">
 
                 
-                <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">NavegadorWeb</span>:
+                <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">GestorTareas</span>:
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> __init__(self):
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># Inicializamos el historial como una lista vacía</span>
-</span></span><span style="display:flex;"><span>        self<span style="color:#ff79c6">.</span>historial <span style="color:#ff79c6">=</span> []
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># Inicializamos la cola de trabajo como una lista vacía</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#ff79c6">.</span>cola_de_trabajo <span style="color:#ff79c6">=</span> []
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">abrir_pagina</span>(self, url):
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># Añadimos la URL al final del historial</span>
-</span></span><span style="display:flex;"><span>        self<span style="color:#ff79c6">.</span>historial<span style="color:#ff79c6">.</span>append(url)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">agregar_tarea</span>(self, tarea):
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># Añadimos la tarea al final de la cola de trabajo</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#ff79c6">.</span>cola_de_trabajo<span style="color:#ff79c6">.</span>append(tarea)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">retroceder</span>(self):
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># Verificamos si hay más de una página en el historial</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> <span style="color:#8be9fd;font-style:italic">len</span>(self<span style="color:#ff79c6">.</span>historial) <span style="color:#ff79c6">&gt;</span> <span style="color:#bd93f9">1</span>:
-</span></span><span style="display:flex;"><span>            <span style="color:#6272a4"># Retrocedemos eliminando la página actual del historial</span>
-</span></span><span style="display:flex;"><span>            self<span style="color:#ff79c6">.</span>historial<span style="color:#ff79c6">.</span>pop()
-</span></span><span style="display:flex;"><span>            <span style="color:#6272a4"># Devolvemos la URL de la página anterior</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">return</span> self<span style="color:#ff79c6">.</span>historial[<span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">procesar_siguiente_tarea</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># Verificamos si hay tareas en la cola de trabajo</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> self<span style="color:#ff79c6">.</span>cola_de_trabajo:
+</span></span><span style="display:flex;"><span>            <span style="color:#6272a4"># Eliminamos y devolvemos la primera tarea de la cola</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">return</span> self<span style="color:#ff79c6">.</span>cola_de_trabajo<span style="color:#ff79c6">.</span>pop(<span style="color:#bd93f9">0</span>)
 </span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">else</span>:
-</span></span><span style="display:flex;"><span>            <span style="color:#6272a4"># Si no hay páginas anteriores, devolvemos un mensaje indicándolo</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#34;No hay páginas anteriores en el historial&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">adelantar</span>(self):
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># Podríamos implementar la funcionalidad de avanzar utilizando otra pila para las páginas adelantadas</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">pass</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#6272a4"># Si no hay tareas pendientes, devolvemos un mensaje indicándolo</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#34;No hay tareas pendientes&#34;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> __name__ <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;__main__&#34;</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Ejemplo de uso del navegador</span>
-</span></span><span style="display:flex;"><span>    navegador <span style="color:#ff79c6">=</span> NavegadorWeb()
-</span></span><span style="display:flex;"><span>    navegador<span style="color:#ff79c6">.</span>abrir_pagina(<span style="color:#f1fa8c">&#34;https://www.ejemplo.com/pagina1&#34;</span>)
-</span></span><span style="display:flex;"><span>    navegador<span style="color:#ff79c6">.</span>abrir_pagina(<span style="color:#f1fa8c">&#34;https://www.ejemplo.com/pagina2&#34;</span>)
-</span></span><span style="display:flex;"><span>    navegador<span style="color:#ff79c6">.</span>abrir_pagina(<span style="color:#f1fa8c">&#34;https://www.ejemplo.com/pagina3&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Ejemplo de uso del gestor de tareas</span>
+</span></span><span style="display:flex;"><span>    gestor <span style="color:#ff79c6">=</span> GestorTareas()
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Agregamos algunas tareas a la cola de trabajo</span>
+</span></span><span style="display:flex;"><span>    gestor<span style="color:#ff79c6">.</span>agregar_tarea(<span style="color:#f1fa8c">&#34;Revisar informe mensual&#34;</span>)
+</span></span><span style="display:flex;"><span>    gestor<span style="color:#ff79c6">.</span>agregar_tarea(<span style="color:#f1fa8c">&#34;Enviar correo de seguimiento&#34;</span>)
+</span></span><span style="display:flex;"><span>    gestor<span style="color:#ff79c6">.</span>agregar_tarea(<span style="color:#f1fa8c">&#34;Preparar presentación para reunión&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Imprimimos la página actual</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Página actual:&#34;</span>, navegador<span style="color:#ff79c6">.</span>historial[<span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>])
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Procesamos y mostramos la tarea actual</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Tarea actual:&#34;</span>, gestor<span style="color:#ff79c6">.</span>procesar_siguiente_tarea())
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Retrocedemos una página y mostramos la página anterior</span>
-</span></span><span style="display:flex;"><span>    pagina_anterior <span style="color:#ff79c6">=</span> navegador<span style="color:#ff79c6">.</span>retroceder()
-</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Página anterior:&#34;</span>, pagina_anterior)
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Simulamos procesar algunas tareas adicionales</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Tarea actual:&#34;</span>, gestor<span style="color:#ff79c6">.</span>procesar_siguiente_tarea())
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Tarea actual:&#34;</span>, gestor<span style="color:#ff79c6">.</span>procesar_siguiente_tarea())
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Retrocedemos otra página y mostramos la página anterior</span>
-</span></span><span style="display:flex;"><span>    pagina_anterior <span style="color:#ff79c6">=</span> navegador<span style="color:#ff79c6">.</span>retroceder()
-</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Página anterior:&#34;</span>, pagina_anterior)
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Agregamos más tareas a la cola de trabajo</span>
+</span></span><span style="display:flex;"><span>    gestor<span style="color:#ff79c6">.</span>agregar_tarea(<span style="color:#f1fa8c">&#34;Resolver problema de software&#34;</span>)
+</span></span><span style="display:flex;"><span>    gestor<span style="color:#ff79c6">.</span>agregar_tarea(<span style="color:#f1fa8c">&#34;Entrevistar candidato para puesto vacante&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Procesamos y mostramos la siguiente tarea</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Tarea actual:&#34;</span>, gestor<span style="color:#ff79c6">.</span>procesar_siguiente_tarea())
 </span></span></code></pre></div><p><a href="/2024/04/10/stack_queue/">Volver</a></p>
 
 
@@ -324,15 +322,10 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2024/04/10/stack_queue/" data-toggle="tooltip" data-placement="top" title="Pilas y Colas: Estructuras de Datos Esenciales">&larr;
+                        <a href="/2024/04/10/stack_example/" data-toggle="tooltip" data-placement="top" title="Pila en un navegador web">&larr;
                             Previous Post</a>
                     </li>
                     
-                    
-                    <li class="next">
-                        <a href="/2024/04/10/queue_example/" data-toggle="tooltip" data-placement="top" title="Cola en un gestor de tareas">Next
-                            Post &rarr;</a>
-                    </li>
                     
                 </ul>
                 
