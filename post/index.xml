@@ -8,8 +8,15 @@
     <language>en-us</language>
     <managingEditor>arbe.94@hotmail.com (Daniel Arbelaez Alvarez)</managingEditor>
     <webMaster>arbe.94@hotmail.com (Daniel Arbelaez Alvarez)</webMaster>
-    <lastBuildDate>Tue, 15 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hammerdev99.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pilas y Colas: Estructuras de Datos Esenciales</title>
+      <link>https://hammerdev99.github.io/2024/04/10/stack_queue/</link>
+      <pubDate>Wed, 10 Apr 2024 00:00:00 +0000</pubDate><author>arbe.94@hotmail.com (Daniel Arbelaez Alvarez)</author>
+      <guid>https://hammerdev99.github.io/2024/04/10/stack_queue/</guid>
+      <description>Las pilas y colas son dos estructuras de datos fundamentales en el mundo de la programación. Este blogpost desglosa sus definiciones, operaciones básicas y aplicaciones prácticas, proporcionando ejemplos claros en Python. ¡Sumérgete en el fascinante mundo de las pilas y colas y mejora tus habilidades de programación!&#xA;Introducción Las estructuras de datos son el pilar fundamental de la informática y la programación. Entre ellas, las pilas y colas destacan por su capacidad para organizar y gestionar datos de manera eficiente.</description>
+    </item>
     <item>
       <title>Explorando Delitos Informáticos y Riesgos Cibernéticos: Claves para la Seguridad Digital</title>
       <link>https://hammerdev99.github.io/2023/08/15/delitos-informaticos-riesgos-ciberneticos/</link>
