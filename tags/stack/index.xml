@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stack on Hammered Solutions</title>
+    <link>https://hammerdev99.github.io/tags/stack/</link>
+    <description>Recent content in Stack on Hammered Solutions</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>arbe.94@hotmail.com (Daniel Arbelaez Alvarez)</managingEditor>
+    <webMaster>arbe.94@hotmail.com (Daniel Arbelaez Alvarez)</webMaster>
+    <lastBuildDate>Wed, 10 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://hammerdev99.github.io/tags/stack/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pila en un navegador web</title>
+      <link>https://hammerdev99.github.io/2024/04/10/stack_example/</link>
+      <pubDate>Wed, 10 Apr 2024 00:00:00 +0000</pubDate><author>arbe.94@hotmail.com (Daniel Arbelaez Alvarez)</author>
+      <guid>https://hammerdev99.github.io/2024/04/10/stack_example/</guid>
+      <description>class NavegadorWeb: def __init__(self): self.historial = [] def abrir_pagina(self, url): self.historial.append(url) def retroceder(self): if len(self.historial) &amp;gt; 1: self.historial.pop() # Retrocedemos eliminando la página actual del historial return self.historial[-1] # Devolvemos la URL de la página anterior else: return &amp;#34;No hay páginas anteriores en el historial&amp;#34; def adelantar(self): # Podríamos implementar la funcionalidad de avanzar utilizando otra pila para las páginas adelantadas pass if __name__ == &amp;#34;__main__&amp;#34;: # Ejemplo de uso navegador = NavegadorWeb() navegador.</description>
+    </item>
+  </channel>
+</rss>
