@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="Hammered Solutions">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="img/2025-01-28-design-pattern-in-public/isomorfia.jpg">
+    <meta property="twitter:image" content="img/2025-01-28-design-pattern-in-public/isomorfia.jpg" />
+    
+
+    
+    <meta name="title" content="Patrones de Diseño en el Procesamiento de Archivos: Una Perspectiva Práctica" />
+    <meta property="og:title" content="Patrones de Diseño en el Procesamiento de Archivos: Una Perspectiva Práctica" />
+    <meta property="twitter:title" content="Patrones de Diseño en el Procesamiento de Archivos: Una Perspectiva Práctica" />
+    
+
+    
+    <meta name="description" content="Software | LegalTech">
+    <meta property="og:description" content="Software | LegalTech" />
+    <meta property="twitter:description" content="Software | LegalTech" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="Blog, Web, Blog, Blogging, Personal Website, Internet">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>Patrones de Diseño en el Procesamiento de Archivos: Una Perspectiva Práctica | Hammered Solutions | Daniel Arbelaez</title>
+
+    <link rel="canonical" href="/2025/01/28/design-pattern-in-public/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MEASUREMENT_ID"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-MEASUREMENT_ID');
+        }
+      </script>
+    
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Hammered Solutions</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Posts</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/dev/">dev</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/tech/">tech</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="/archive//">ARCHIVO</a></li>
+                    
+                        <li><a href="/about//">ACERCA DE</a></li>
+                    
+		            <li>
+                        <a href="/search"><i class="fa fa-search"></i></a>
+		           </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/2025-01-28-design-pattern-in-public/isomorfia.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/design-patterns" title="design patterns">
+                            design patterns
+                        </a>
+                        
+                        <a class="tag" href="/tags/building-in-public" title="building in public">
+                            building in public
+                        </a>
+                        
+                    </div>
+                    <h1>Patrones de Diseño en el Procesamiento de Archivos: Una Perspectiva Práctica</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                Daniel Arbelaez
+                             
+                            on 
+                            Tuesday, January 28, 2025
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <p>En el mundo del desarrollo de software, nos encontramos frecuentemente con situaciones que requieren soluciones elegantes y mantenibles. Recientemente, me enfrenté a un caso interesante: la implementación de un sistema de procesamiento de carpetas que debía mantener un equilibrio entre flexibilidad y desacoplamiento.</p>
+<p>El escenario planteaba un desafío particular. Se necesitaba desarrollar una funcionalidad que permitiera procesar carpetas de diferentes maneras, donde cada método de procesamiento compartía una estructura común pero requería su propia implementación específica. Lo fascinante de este requisito era la necesidad explícita de mantener un bajo acoplamiento con la interfaz gráfica, asegurando que ambas partes pudieran evolucionar de manera independiente.</p>
+<p>Al analizar este escenario, el patrón Strategy emergió como la solución natural. Este patrón, uno de los pilares del diseño orientado a objetos, nos permite encapsular diferentes algoritmos en clases separadas, permitiendo que sean intercambiables. Es como tener diferentes herramientas en una caja de herramientas, donde cada una está diseñada para un propósito específico pero todas comparten la misma manera de ser utilizadas.</p>
+<p>La belleza de esta aproximación radica en su simplicidad y elegancia. Al definir una interfaz común para todos los procesadores de carpetas, creamos un contrato claro que cada implementación debe seguir. Esto no solo facilita la adición de nuevos métodos de procesamiento sino que también simplifica el mantenimiento del código existente. Es como establecer un protocolo estándar que todos los nuevos desarrollos deben seguir, asegurando consistencia y predictibilidad en el sistema.</p>
+<p>El desacoplamiento de la interfaz gráfica se logra mediante la implementación de interfaces bien definidas. Esta separación clara de responsabilidades nos permite modificar la forma en que se presenta la información al usuario sin afectar la lógica subyacente de procesamiento. Es similar a cómo un automóvil moderno separa los controles del conductor de la mecánica del motor: puedes actualizar el panel de instrumentos sin necesidad de modificar el funcionamiento interno del vehículo.</p>
+<p>Esta arquitectura también facilita enormemente las pruebas. Al tener componentes claramente separados y definidos, podemos probar cada parte del sistema de manera aislada, asegurando que cada pieza funcione correctamente antes de integrarla con el resto. Es como probar cada ingrediente de una receta antes de comenzar a cocinar, garantizando que el resultado final será exactamente lo que esperamos.</p>
+<p>La implementación resultante no solo cumple con los requisitos funcionales sino que también establece una base sólida para futuras extensiones. Cada nuevo algoritmo de procesamiento puede ser agregado como una nueva estrategia, sin necesidad de modificar el código existente, cumpliendo así con el principio Open/Closed de SOLID.</p>
+<p>En conclusión, este caso nos demuestra cómo los patrones de diseño, cuando se aplican adecuadamente, pueden transformar un requisito complejo en una solución elegante y mantenible. No se trata solo de hacer que el código funcione, sino de crear una estructura que facilite su evolución y mantenimiento a lo largo del tiempo. La verdadera elegancia en el diseño de software no está en la complejidad de las soluciones, sino en la simplicidad y claridad con la que podemos resolver problemas complejos.</p>
+<p>La próxima vez que te enfrentes a un desafío similar, recuerda que los patrones de diseño son herramientas poderosas que pueden ayudarte a crear soluciones más robustas y mantenibles. La clave está en entender no solo cómo aplicarlos, sino también cuándo son apropiados para cada situación específica.</p>
+<h2 id="notas-adicionales">Notas adicionales</h2>
+<p>HABLAR DE ORTOGONALIDAD</p>
+<h2 id="proceso-de-mejora-arquitectonica">Proceso de mejora arquitectonica</h2>
+<p>El proceso de mejora comenzó analizando la necesidad de manejar diferentes estrategias de procesamiento de expedientes según su estructura (cuaderno único, expediente único, o múltiples expedientes). Inicialmente, se identificó que el código original mezclaba responsabilidades y carecía de una estructura clara para gestionar estos diferentes casos.</p>
+<p>Para mejorar esto, se implementaron dos patrones de diseño principales:</p>
+<ol>
+<li><strong>Patrón Strategy</strong>:</li>
+</ol>
+<ul>
+<li>Se implementó para separar las diferentes lógicas de procesamiento de expedientes</li>
+<li>Se creó una interfaz abstracta <code>ProcessStrategy</code> que define el contrato común</li>
+<li>Se crearon tres estrategias concretas para manejar cada caso específico:
+<ul>
+<li><code>SingleCuadernoStrategy</code></li>
+<li><code>SingleExpedienteStrategy</code></li>
+<li><code>MultiExpedienteStrategy</code></li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><strong>Comunicación con la GUI</strong>:</li>
+</ol>
+<ul>
+<li>Se identificó la necesidad de desacoplar la lógica de procesamiento de la interfaz gráfica</li>
+<li>Se implementó un sistema de comunicación a través del <code>ProcessingContext</code></li>
+<li>Se crearon métodos específicos para actualizar la interfaz de manera consistente</li>
+<li>Se centralizó el manejo de mensajes y actualizaciones visuales</li>
+</ul>
+<p>La arquitectura evolucionó para tener una mejor separación de responsabilidades:</p>
+<ul>
+<li>El <code>ProcessingContext</code> gestiona la selección y ejecución de estrategias</li>
+<li>Las estrategias manejan la lógica específica de procesamiento</li>
+<li>La GUI se mantiene desacoplada y se actualiza a través de una interfaz bien definida</li>
+</ul>
+<p>Esta mejora arquitectónica proporciona varios beneficios:</p>
+<ul>
+<li>Mayor facilidad para añadir nuevas estrategias de procesamiento</li>
+<li>Mejor mantenibilidad del código</li>
+<li>Mayor claridad en las responsabilidades de cada componente</li>
+<li>Interfaz de usuario más consistente y responsiva</li>
+</ul>
+
+
+                
+                
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2024/10/12/transformando-la-justicia/" data-toggle="tooltip" data-placement="top" title="Marduk: Un Viaje hacia la Innovación Judicial Digital">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
+                
+
+                
+
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+
+                
+                
+                <section>
+                    <hr>
+                    <h5>FRIENDS</h5>
+                    <ul class="list-inline">
+                        
+                        <li><a target="_blank" href="https://www.alexanderoviedofadul.dev/">Alexander Oviedo Fadul</a></li>
+                        
+                    </ul>
+                </section>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    <li>
+                        <a href="mailto:arbe.94@hotmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/HammerDev99">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/daniel-arbelaez-/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+                   <li>
+                       <a href='' rel="alternate" type="application/rss+xml" title="Hammered Solutions" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+            
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; Hammered Solutions 2025
+                    
+                    <br>
+                    <a href="https://github.com/HammerDev99"> Daniel Arbelaez Alvarez </a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="180px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=HammerDev99&type=follow&count=true" >
+                    </iframe>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>
