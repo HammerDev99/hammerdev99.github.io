@@ -212,7 +212,7 @@
                                 Daniel Arbelaez
                              
                             on 
-                            Tuesday, January 28, 2025
+                            Friday, February 28, 2025
                             
                             
                             
@@ -330,7 +330,7 @@
 </span></span><span style="display:flex;"><span>    strategy<span style="color:#ff79c6">.</span>process(processor)
 </span></span></code></pre></div><p>Para más detalles en código, visita el repositorio original que contiene la clase <a href="https://github.com/HammerDev99/GestionExpedienteElectronico_Version1/blob/master/src/controller/processing_context.py">ProcessingContext</a></p>
 <h2 id="lecciones-aprendidas-la-belleza-de-la-ortogonalidad">Lecciones aprendidas: La belleza de la ortogonalidad</h2>
-<p>Uno de los momentos más estimulantes fue cuando un colega me pidió cambiar el comportamiento para los cuadernos. En mi antiguo diseño, habría significado revisar todo el código e incluir más <code>if/else</code> en las funciones relacionadas como <code>obtener_rutas</code> y <code>process</code>. Con este nuevo enfoque, solo modifiqué una clase y el resto del sistema siguió funcionando perfectamente. Por ende, esta experiencia me dejó tres lecciones valiosas:</p>
+<p>Uno de los momentos más estimulantes fue cuando un colega me pidió cambiar el comportamiento para los <em>cuadernos simples</em>. En mi antiguo diseño, habría significado revisar todo el código e incluir más <code>if/else</code> en las funciones relacionadas como <code>obtener_rutas</code> y <code>process</code>. Con este nuevo enfoque, solo modifiqué una clase y el resto del sistema siguió funcionando perfectamente. Por ende, esta experiencia me dejó tres lecciones valiosas:</p>
 <ol>
 <li>
 <p><strong>Los patrones de diseño son herramientas, no dogmas</strong>: Strategy funcionó perfectamente para este caso, pero lo importante fue entender el problema antes de elegir el patrón.</p>
@@ -346,7 +346,7 @@
 <p>La implementación resultante no solo satisface los requisitos funcionales, sino que establece <em>cimientos robustos</em> para el futuro. Cada nuevo algoritmo de procesamiento puede integrarse como una estrategia adicional sin alterar el código existente, honrando así el principio Open/Closed de SOLID. Este principio, fundamental en el diseño de software moderno, nos permite extender sin modificar – exactamente como un equipo de rugby que incorpora nuevos jugadores sin cambiar sus tácticas esenciales.</p>
 <p>Al igual que un flanker debe adaptarse constantemente sin perder su propósito fundamental, un buen diseño de software mantiene su flexibilidad sin comprometer su integridad estructural. La auténtica elegancia no reside en construir sistemas complejos, sino en la simplicidad con la que resolvemos problemas intrincados.</p>
 <p>En conclusión, este caso ilustra vívidamente cómo los patrones de diseño, cuando se aplican con criterio, transforman requisitos complejos en soluciones elegantes y mantenibles. No basta con que el código funcione; lo verdaderamente valioso es crear arquitecturas que faciliten su evolución y mantenimiento a través del tiempo. La maestría está en comprender no solo cómo implementar estos patrones, sino también en reconocer cuándo son apropiados para cada escenario específico.</p>
-<p>De ahora en adelante, cada vez que enfrente a un desafio de diseño similar, recordaré al flanker, versátil pero enfocado, conectado pero independiente. A veces, las mejores lecciones de software provienen de los lugares más inesperados.</p>
+<p>De ahora en adelante, cada vez que te enfrentes a un desafio de diseño similar, puedes recordar al flanker, versátil pero enfocado, conectado pero independiente. A veces, las mejores lecciones de software provienen de los lugares más inesperados.</p>
 
 
                 
