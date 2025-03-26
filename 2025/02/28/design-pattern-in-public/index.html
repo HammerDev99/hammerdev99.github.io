@@ -247,8 +247,12 @@
   <img src="/img/2025-02-28-design-pattern-in-public/flankers.jpeg" alt="alt">
 
 </p>
-<p>Un flanker (posición 6 o 7) es quizás el jugador más versátil del equipo. No está completamente especializado como un pilar o un wing, sino que participa en casi todas las fases del juego. Defiende, ataca, apoya, disputa balones y conecta las diferentes líneas de juego. Es ortogonal por naturaleza.</p>
-<p>No sucede lo mismo con el resto de delanteros, como los pilares (posiciones 1 y 3) o el hooker (posición 2), cuyos roles estan altamente especializados en las formaciones fijas, el contacto físico y la obtención de la pelota. Tampoco es como los backs, desde el medio scrum (9) hasta los wings (11 y 14), quienes se especializan en ataque, velocidad y manejo de balón.</p>
+<p>Un flanker (posición 6 o 7) es quizás el jugador más versátil del equipo. No está completamente especializado como un forward o un back, sino que participa en casi todas las fases del juego. Defiende, ataca, apoya, disputa balones y conecta las diferentes líneas de juego. Es ortogonal por naturaleza.</p>
+<p>No sucede lo mismo con el resto de forwards, como los pilares (posiciones 1 y 3) o el hooker (posición 2), cuyos roles estan altamente especializados en las formaciones fijas, el contacto físico y la obtención de la pelota. Tampoco es como los backs, desde el medio scrum (9) hasta los wings (11 y 14), quienes se especializan en ataque, velocidad y manejo de balón.</p>
+<p>
+  <img src="/img/2025-02-28-design-pattern-in-public/posiciones-rugby.jpg" alt="alt">
+
+</p>
 <p>El flanker existe precisamente en ese límite entre ambos mundos, tiene la potencia física de un forward pero la movilidad de un back, permitiéndole adaptarse a cada situación y mantener la cohesión entre las diferentes líneas de juego sin perder su propia función en el equipo.</p>
 <blockquote>
 <p>En programación informática, ortogonalidad significa que las operaciones cambian sólo una cosa sin afectar a otras. <a href="https://en.m.wikipedia.org/wiki/Orthogonality_%28programming%29">tomado de Wikipedia</a></p>
@@ -329,6 +333,20 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Ejecuta la estrategia seleccionada</span>
 </span></span><span style="display:flex;"><span>    strategy<span style="color:#ff79c6">.</span>process(processor)
 </span></span></code></pre></div><p>Para más detalles en código, visita el repositorio original que contiene la clase <a href="https://github.com/HammerDev99/GestionExpedienteElectronico_Version1/blob/master/src/controller/processing_context.py">ProcessingContext</a></p>
+<h2 id="la-estructura-del-patrón-strategy-simplicidad-y-elegancia">La estructura del patrón Strategy: Simplicidad y elegancia</h2>
+<p>El diagrama UML del patrón Strategy ilustra perfectamente su elegancia estructural. Como se observa en la imagen, el patrón se compone de tres elementos fundamentales:</p>
+<p>
+  <img src="/img/2025-02-28-design-pattern-in-public/strategy.png" alt="alt">
+
+</p>
+<ol>
+<li>Una interfaz <strong>Strategy</strong> que define el contrato común para todos los algoritmos</li>
+<li>Las implementaciones concretas (<strong>ConcreteStrategyA</strong> y <strong>ConcreteStrategyB</strong>) que encapsulan las diferentes lógicas</li>
+<li>La clase <strong>Context</strong> que utiliza las estrategias y delega la ejecución al algoritmo seleccionado</li>
+</ol>
+<p>Esta separación de responsabilidades nos permite aprovechar el polimorfismo, uno de los pilares fundamentales de la programación orientada a objetos. Gracias a este mecanismo, el contexto puede intercambiar estrategias sin conocer sus implementaciones específicas, manteniendo así un bajo acoplamiento entre componentes.</p>
+<p>La verdadera potencia de este patrón radica precisamente en su simplicidad: al encapsular cada algoritmo en su propia clase que implementa la misma interfaz, conseguimos un sistema extremadamente flexible donde añadir nuevas estrategias no requiere modificar el código existente, respetando así el principio Open/Closed de SOLID.</p>
+<p>El diagrama UML de este patrón es muy sencillo, solo separamos las diferentes lógicas para realizar una acción sin olvidar que implemente de una interface para luego valernos del polimorfismo para que nuestro patrón funcione. Y pues la clase contexto que puede ser cualquier clase que utilice nuestras estrategias.</p>
 <h2 id="lecciones-aprendidas-la-belleza-de-la-ortogonalidad">Lecciones aprendidas: La belleza de la ortogonalidad</h2>
 <p>Uno de los momentos más estimulantes fue cuando un colega me pidió cambiar el comportamiento para los <em>cuadernos simples</em>. En mi antiguo diseño, habría significado revisar todo el código e incluir más <code>if/else</code> en las funciones relacionadas como <code>obtener_rutas</code> y <code>process</code>. Con este nuevo enfoque, solo modifiqué una clase y el resto del sistema siguió funcionando perfectamente. Por ende, esta experiencia me dejó tres lecciones valiosas:</p>
 <ol>
