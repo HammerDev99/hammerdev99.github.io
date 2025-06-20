@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Hammered Solutions</title>
+    <title>Categories on Daniel Arbelaez (HammerDev99)</title>
     <link>https://hammerdev99.github.io/categories/</link>
-    <description>Recent content in Categories on Hammered Solutions</description>
+    <description>Recent content in Categories on Daniel Arbelaez (HammerDev99)</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <managingEditor>arbe.94@hotmail.com (Daniel Arbelaez Alvarez)</managingEditor>
     <webMaster>arbe.94@hotmail.com (Daniel Arbelaez Alvarez)</webMaster>
-    <lastBuildDate>Fri, 28 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hammerdev99.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Thoughts</title>
+      <link>https://hammerdev99.github.io/categories/thoughts/</link>
+      <pubDate>Sat, 14 Jun 2025 00:00:00 +0000</pubDate><author>arbe.94@hotmail.com (Daniel Arbelaez Alvarez)</author>
+      <guid>https://hammerdev99.github.io/categories/thoughts/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Dev</title>
       <link>https://hammerdev99.github.io/categories/dev/</link>

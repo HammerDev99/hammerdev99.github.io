@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     
-    <meta property="og:site_name" content="Hammered Solutions">
+    <meta property="og:site_name" content="Daniel Arbelaez (HammerDev99)">
     <meta property="og:type" content="article">
 
     
@@ -34,7 +34,7 @@
     <meta name="keyword"  content="Blog, Web, Blog, Blogging, Personal Website, Internet">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>El programador flanker: De la cancha de rugby a la arquitectura de software | Hammered Solutions | Daniel Arbelaez</title>
+    <title>El programador flanker: De la cancha de rugby a la arquitectura de software | HammerDev99 | Daniel Arbelaez</title>
 
     <link rel="canonical" href="/2025/02/28/design-pattern-in-public/">
 
@@ -110,7 +110,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Hammered Solutions</a>
+            <a class="navbar-brand" href="/">Daniel Arbelaez (HammerDev99)</a>
         </div>
 
         
@@ -129,6 +129,10 @@
                         
                         <li>
                             <a href="/categories/tech/">tech</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/thoughts/">thoughts</a>
                         </li>
                         
                     
@@ -280,7 +284,7 @@
 <p>El desafío no era trivial. Estaba desarrollando un sistema para gestionar expedientes judiciales electrónicos que debía procesar carpetas de diferentes maneras según su estructura:</p>
 <ul>
 <li>Cuadernos simples</li>
-<li>Expedientes completos</li>
+<li>Expedientes completos (uno o más cuadernos simples)</li>
 <li>Múltiples expedientes</li>
 </ul>
 <p>Cada tipo requería su propio tratamiento, pero compartían operaciones comunes. Y lo más importante que estuvieran completamente desacoplados de la lógica de procesamiento.</p>
@@ -301,7 +305,7 @@
 <li><code>SingleExpedienteStrategy</code></li>
 <li><code>MultiExpedienteStrategy</code></li>
 </ul>
-<p>Así, cada estrategia sabía exactamente cómo manejar su caso específico, pero desde fuera, todas se usaban de la misma manera. <strong>Como un flanker que sabe cuándo atacar y cuándo defender, cambiando de rol según la situación del partido</strong>.</p>
+<p>Así, cada estrategia sabía exactamente cómo manejar su caso específico, pero desde fuera, todas se usaban de la misma manera. <strong>Como un flanker que sabe cuándo jugar como forward (potencia física) y cuándo jugar como back (movilidad), cambiando de rol según la situación del partido</strong>.</p>
 <p>Para más detalles en código, visita el repositorio original que contiene la clase <a href="https://github.com/HammerDev99/GestionExpedienteElectronico_Version1/blob/master/src/controller/process_strategy.py">ProcessStrategy</a></p>
 <h3 id="el-contexto-un-director-técnico-cuando-se-ejecuta-el-código">El contexto: Un director técnico cuando se ejecuta el código</h3>
 <p>Para completar la implementación del patrón Strategy, necesitaba un &ldquo;director técnico&rdquo; que decidiera qué estrategia utilizar en cada momento. Esta es la función del <code>ProcessingContext</code>:</p>
@@ -380,6 +384,11 @@
                             Previous Post</a>
                     </li>
                     
+                    
+                    <li class="next">
+                        <a href="/2025/06/14/thoughts/" data-toggle="tooltip" data-placement="top" title="First Thoughts">Next
+                            Post &rarr;</a>
+                    </li>
                     
                 </ul>
                 
@@ -490,7 +499,7 @@
             
            
                    <li>
-                       <a href='' rel="alternate" type="application/rss+xml" title="Hammered Solutions" >
+                       <a href='' rel="alternate" type="application/rss+xml" title="Daniel Arbelaez (HammerDev99)" >
                            <span class="fa-stack fa-lg">
                                <i class="fas fa-circle fa-stack-2x"></i>
                                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
@@ -500,7 +509,7 @@
             
              </ul>
 		<p class="copyright text-muted">
-                    Copyright &copy; Hammered Solutions 2025
+                    Copyright &copy; Daniel Arbelaez (HammerDev99) 2025
                     
                     <br>
                     <a href="https://github.com/HammerDev99"> Daniel Arbelaez Alvarez </a> |

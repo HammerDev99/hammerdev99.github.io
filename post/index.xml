@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Hammered Solutions</title>
+    <title>Posts on Daniel Arbelaez (HammerDev99)</title>
     <link>https://hammerdev99.github.io/post/</link>
-    <description>Recent content in Posts on Hammered Solutions</description>
+    <description>Recent content in Posts on Daniel Arbelaez (HammerDev99)</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <managingEditor>arbe.94@hotmail.com (Daniel Arbelaez Alvarez)</managingEditor>
     <webMaster>arbe.94@hotmail.com (Daniel Arbelaez Alvarez)</webMaster>
-    <lastBuildDate>Fri, 28 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hammerdev99.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First Thoughts</title>
+      <link>https://hammerdev99.github.io/2025/06/14/thoughts/</link>
+      <pubDate>Sat, 14 Jun 2025 00:00:00 +0000</pubDate><author>arbe.94@hotmail.com (Daniel Arbelaez Alvarez)</author>
+      <guid>https://hammerdev99.github.io/2025/06/14/thoughts/</guid>
+      <description>Escribir acerca de https://keep.google.com/#LIST/1ai8F-_aBmcGHjUo2xUsLS2qlvN1OGOpgPBddBYzRLszUpEE5xPEzoOQYUmmP82DuHRZW</description>
+    </item>
     <item>
       <title>El programador flanker: De la cancha de rugby a la arquitectura de software</title>
       <link>https://hammerdev99.github.io/2025/02/28/design-pattern-in-public/</link>
@@ -53,7 +60,7 @@
       <description>¿Alguna vez te has sentido atrapado en tareas repetitivas y tediosas durante tu jornada laboral? A principios de 2022, me encontré en una situación similar. Las demandas de digitalización en mi institución habían convertido varias actividades en procesos aburridos y monótonos. La chispa de inspiración vino cuando leí el fascinante libro &amp;ldquo;Sálvese quien pueda&amp;rdquo; de Andrés Oppenheimer, que me mostró cómo la automatización está revolucionando la industria y transformando el mercado laboral.</description>
     </item>
     <item>
-      <title>Hammered Solutions</title>
+      <title>Daniel Arbelaez (HammerDev99)</title>
       <link>https://hammerdev99.github.io/2022/05/10/hello-world/</link>
       <pubDate>Tue, 10 May 2022 00:00:00 +0000</pubDate><author>arbe.94@hotmail.com (Daniel Arbelaez Alvarez)</author>
       <guid>https://hammerdev99.github.io/2022/05/10/hello-world/</guid>
