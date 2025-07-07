@@ -5,7 +5,7 @@
     <link>http://localhost:1313/tags/hugo/</link>
       <atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <description>Hugo</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 26 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>es</language><lastBuildDate>Thu, 26 Oct 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
       <title>Hugo</title>
@@ -37,21 +37,21 @@
     </item>
     
     <item>
-      <title>📈 Communicate your results effectively with the best data visualizations</title>
+      <title>📈 Comunica tus resultados de manera efectiva con las mejores visualizaciones de datos</title>
       <link>http://localhost:1313/post/data-visualization/</link>
       <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/post/data-visualization/</guid>
-      <description>&lt;p&gt;Hugo Blox is designed to give technical content creators a seamless experience. You can focus on the content and Hugo Blox handles the rest.&lt;/p&gt;
-&lt;p&gt;Use popular tools such as Plotly, Mermaid, and data frames.&lt;/p&gt;
-&lt;h2 id=&#34;charts&#34;&gt;Charts&lt;/h2&gt;
-&lt;p&gt;Hugo Blox supports the popular &lt;a href=&#34;https://plot.ly/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Plotly&lt;/a&gt; format for interactive data visualizations. With Plotly, you can design almost any kind of visualization you can imagine!&lt;/p&gt;
-&lt;p&gt;Save your Plotly JSON in your page folder, for example &lt;code&gt;line-chart.json&lt;/code&gt;, and then add the &lt;code&gt;{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code&gt; shortcode where you would like the chart to appear.&lt;/p&gt;
+      <description>&lt;p&gt;Hugo Blox está diseñado para brindar a los creadores de contenido técnico una experiencia perfecta. Puedes concentrarte en el contenido y Hugo Blox se encarga del resto.&lt;/p&gt;
+&lt;p&gt;Usa herramientas populares como Plotly, Mermaid y marcos de datos.&lt;/p&gt;
+&lt;h2 id=&#34;gráficos&#34;&gt;Gráficos&lt;/h2&gt;
+&lt;p&gt;Hugo Blox admite el formato popular &lt;a href=&#34;https://plot.ly/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Plotly&lt;/a&gt; para visualizaciones de datos interactivas. ¡Con Plotly, puedes diseñar casi cualquier tipo de visualización que puedas imaginar!&lt;/p&gt;
+&lt;p&gt;Guarda tu JSON de Plotly en la carpeta de tu página, por ejemplo &lt;code&gt;line-chart.json&lt;/code&gt;, y luego añade el shortcode &lt;code&gt;{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code&gt; donde quieras que aparezca el gráfico.&lt;/p&gt;
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
 
 
-&lt;div id=&#34;chart-754296381&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-674598231&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -69,16 +69,16 @@
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-754296381&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-674598231&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
 &lt;/script&gt;
 
-&lt;p&gt;You might also find the &lt;a href=&#34;http://plotly-json-editor.getforge.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Plotly JSON Editor&lt;/a&gt; useful.&lt;/p&gt;
-&lt;h2 id=&#34;diagrams&#34;&gt;Diagrams&lt;/h2&gt;
-&lt;p&gt;Hugo Blox supports the &lt;em&gt;Mermaid&lt;/em&gt; Markdown extension for diagrams.&lt;/p&gt;
-&lt;p&gt;An example &lt;strong&gt;flowchart&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;También puede que encuentres útil el &lt;a href=&#34;http://plotly-json-editor.getforge.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Editor JSON de Plotly&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;diagramas&#34;&gt;Diagramas&lt;/h2&gt;
+&lt;p&gt;Hugo Blox admite la extensión &lt;em&gt;Mermaid&lt;/em&gt; de Markdown para diagramas.&lt;/p&gt;
+&lt;p&gt;Un ejemplo de &lt;strong&gt;diagrama de flujo&lt;/strong&gt;:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;```mermaid
 graph TD
 A[Hard] --&amp;gt;|Text| B(Round)
@@ -87,14 +87,14 @@ C --&amp;gt;|One| D[Result 1]
 C --&amp;gt;|Two| E[Result 2]
 ```
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
+&lt;p&gt;se renderiza como&lt;/p&gt;
 &lt;div class=&#34;mermaid&#34;&gt;graph TD
 A[Hard] --&gt;|Text| B(Round)
 B --&gt; C{Decision}
 C --&gt;|One| D[Result 1]
 C --&gt;|Two| E[Result 2]
 &lt;/div&gt;
-&lt;p&gt;An example &lt;strong&gt;sequence diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;Un ejemplo de &lt;strong&gt;diagrama de secuencia&lt;/strong&gt;:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;```mermaid
 sequenceDiagram
 Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
@@ -107,7 +107,7 @@ John-&amp;gt;&amp;gt;Bob: How about you?
 Bob--&amp;gt;&amp;gt;John: Jolly good!
 ```
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
+&lt;p&gt;se renderiza como&lt;/p&gt;
 &lt;div class=&#34;mermaid&#34;&gt;sequenceDiagram
 Alice-&gt;&gt;John: Hello John, how are you?
 loop Healthcheck
@@ -118,7 +118,7 @@ John--&gt;&gt;Alice: Great!
 John-&gt;&gt;Bob: How about you?
 Bob--&gt;&gt;John: Jolly good!
 &lt;/div&gt;
-&lt;p&gt;An example &lt;strong&gt;class diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;Un ejemplo de &lt;strong&gt;diagrama de clases&lt;/strong&gt;:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;```mermaid
 classDiagram
 Class01 &amp;lt;|-- AveryLongClass : Cool
@@ -136,7 +136,7 @@ Class01 : int gorilla
 Class08 &amp;lt;--&amp;gt; C2: Cool label
 ```
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
+&lt;p&gt;se renderiza como&lt;/p&gt;
 &lt;div class=&#34;mermaid&#34;&gt;classDiagram
 Class01 &lt;|-- AveryLongClass : Cool
 Class03 *-- Class04
@@ -152,7 +152,7 @@ Class01 : int chimp
 Class01 : int gorilla
 Class08 &lt;--&gt; C2: Cool label
 &lt;/div&gt;
-&lt;p&gt;An example &lt;strong&gt;state diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;Un ejemplo de &lt;strong&gt;diagrama de estados&lt;/strong&gt;:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;```mermaid
 stateDiagram
 [*] --&amp;gt; Still
@@ -163,7 +163,7 @@ Moving --&amp;gt; Crash
 Crash --&amp;gt; [*]
 ```
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
+&lt;p&gt;se renderiza como&lt;/p&gt;
 &lt;div class=&#34;mermaid&#34;&gt;stateDiagram
 [*] --&gt; Still
 Still --&gt; [*]
@@ -172,10 +172,10 @@ Moving --&gt; Still
 Moving --&gt; Crash
 Crash --&gt; [*]
 &lt;/div&gt;
-&lt;h2 id=&#34;data-frames&#34;&gt;Data Frames&lt;/h2&gt;
-&lt;p&gt;Save your spreadsheet as a CSV file in your page&amp;rsquo;s folder and then render it by adding the &lt;em&gt;Table&lt;/em&gt; shortcode to your page:&lt;/p&gt;
+&lt;h2 id=&#34;marcos-de-datos&#34;&gt;Marcos de Datos&lt;/h2&gt;
+&lt;p&gt;Guarda tu hoja de cálculo como un archivo CSV en la carpeta de tu página y luego renderízala añadiendo el shortcode &lt;em&gt;Table&lt;/em&gt; a tu página:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{{&amp;lt;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;table&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;results.csv&amp;#34;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;header&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;caption&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Table 1: My results&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;}}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;renders as&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;se renderiza como&lt;/p&gt;
 
 
 
@@ -238,11 +238,11 @@ Crash --&gt; [*]
   
   &lt;/tbody&gt;
   
-    &lt;caption class=&#34;table-caption&#34;&gt;Table 1: My results&lt;/caption&gt;
+    &lt;caption class=&#34;table-caption&#34;&gt;Tabla 1: Mis resultados&lt;/caption&gt;
   
 &lt;/table&gt;
 
-&lt;h2 id=&#34;did-you-find-this-page-helpful-consider-sharing-it-&#34;&gt;Did you find this page helpful? Consider sharing it 🙌&lt;/h2&gt;
+&lt;h2 id=&#34;te-resultó-útil-esta-página-considera-compartirla-&#34;&gt;¿Te resultó útil esta página? ¡Considera compartirla! 🙌&lt;/h2&gt;
 </description>
     </item>
     

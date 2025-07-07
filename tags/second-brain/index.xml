@@ -5,7 +5,7 @@
     <link>http://localhost:1313/tags/second-brain/</link>
       <atom:link href="http://localhost:1313/tags/second-brain/index.xml" rel="self" type="application/rss+xml" />
     <description>Second Brain</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 26 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>es</language><lastBuildDate>Thu, 26 Oct 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
       <title>Second Brain</title>
@@ -13,19 +13,19 @@
     </image>
     
     <item>
-      <title>🧠 Sharpen your thinking with a second brain</title>
+      <title>🧠 Agudiza tu pensamiento con un segundo cerebro</title>
       <link>http://localhost:1313/post/second-brain/</link>
       <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/post/second-brain/</guid>
-      <description>&lt;p&gt;Create a personal knowledge base and share your knowledge with your peers.&lt;/p&gt;
-&lt;p&gt;Hugo Blox web framework empowers you with one of the most flexible note-taking capabilities out there.&lt;/p&gt;
-&lt;p&gt;Create a powerful knowledge base that works on top of a local folder of plain text Markdown files.&lt;/p&gt;
-&lt;p&gt;Use it as your second brain, either publicly sharing your knowledge with your peers via your website, or via a private GitHub repository and password-protected site just for yourself.&lt;/p&gt;
-&lt;h2 id=&#34;mindmaps&#34;&gt;Mindmaps&lt;/h2&gt;
-&lt;p&gt;Hugo Blox supports a Markdown extension for mindmaps.&lt;/p&gt;
-&lt;p&gt;With this open format, can even edit your mindmaps in other popular tools such as Obsidian.&lt;/p&gt;
-&lt;p&gt;Simply insert a Markdown code block labelled as &lt;code&gt;markmap&lt;/code&gt; and optionally set the height of the mindmap as shown in the example below.&lt;/p&gt;
-&lt;p&gt;Mindmaps can be created by simply writing the items as a Markdown list within the &lt;code&gt;markmap&lt;/code&gt; code block, indenting each item to create as many sub-levels as you need:&lt;/p&gt;
+      <description>&lt;p&gt;Crea una base de conocimiento personal y comparte tu conocimiento con tus colegas.&lt;/p&gt;
+&lt;p&gt;El framework web Hugo Blox te capacita con una de las capacidades de toma de notas más flexibles que existen.&lt;/p&gt;
+&lt;p&gt;Crea una base de conocimiento poderosa que funciona sobre una carpeta local de archivos de texto plano Markdown.&lt;/p&gt;
+&lt;p&gt;Úsalo como tu segundo cerebro, ya sea compartiendo públicamente tu conocimiento con tus colegas a través de tu sitio web, o mediante un repositorio privado de GitHub y un sitio protegido por contraseña solo para ti.&lt;/p&gt;
+&lt;h2 id=&#34;mapas-mentales&#34;&gt;Mapas Mentales&lt;/h2&gt;
+&lt;p&gt;Hugo Blox admite una extensión de Markdown para mapas mentales.&lt;/p&gt;
+&lt;p&gt;Con este formato abierto, incluso puedes editar tus mapas mentales en otras herramientas populares como Obsidian.&lt;/p&gt;
+&lt;p&gt;Simplemente inserta un bloque de código Markdown etiquetado como &lt;code&gt;markmap&lt;/code&gt; y opcionalmente establece la altura del mapa mental como se muestra en el ejemplo a continuación.&lt;/p&gt;
+&lt;p&gt;Los mapas mentales se pueden crear simplemente escribiendo los elementos como una lista de Markdown dentro del bloque de código &lt;code&gt;markmap&lt;/code&gt;, indentando cada elemento para crear tantos subniveles como necesites:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;
 &lt;pre class=&#34;chroma&#34;&gt;
 &lt;code&gt;

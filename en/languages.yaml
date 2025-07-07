@@ -1,0 +1,49 @@
+# Languages
+#   Create a section for each of your site's languages.
+#   Documentation: https://docs.hugoblox.com/reference/language/
+
+# Default language
+en:
+  languageCode: en-us
+  # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
+  #contentDir: content/en
+
+es:
+  languageCode: es
+  #contentDir: content/es
+  title: Daniel Arbelaez Alvarez
+  params:
+    description: Sitio web profesional de Daniel Arbelaez Alvarez - Ingeniero en Software especializado en Inteligencia Artificial, LegalTech y Automatización.
+  menu:
+    main:
+      - name: Biografía
+        url: /
+        weight: 10
+      - name: Publicaciones
+        url: /#papers
+        weight: 11
+      - name: Charlas
+        url: /#talks
+        weight: 12
+      - name: Experiencia
+        url: experience/
+        weight: 20
+      - name: Proyectos
+        url: projects/
+        weight: 30
+      - name: Enseñanza
+        url: teaching/
+        weight: 40
+
+# Uncomment the lines below to configure your website in a second language.
+#zh:
+#  languageCode: zh-Hans
+#  contentDir: content/zh
+#  title: Chinese website title...
+#  params:
+#    description: Site description in Chinese...
+#  menu:
+#    main:
+#      - name: 传
+#        url: '#about'
+#        weight: 1
